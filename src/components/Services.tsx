@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Users, MessageSquare } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import ServicesSection from "./ServicesSection";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // Farmers Section Component
 const FarmersSection = ({ onClick }: { onClick: () => void }) => (
@@ -47,7 +47,8 @@ const ConsultancySection = () => (
 
 // Main Services Component
 const Services = () => {
-  const [showFarmersServices, setShowFarmersServices] = useState(false);
+  // const [showFarmersServices, setShowFarmersServices] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <section id="services" className="py-20 bg-green-50">
@@ -63,10 +64,8 @@ const Services = () => {
           {/* Render Farmers Section */}
           <FarmersSection
             onClick={() => (
-              <Link
-                to="/contactUs"
-              >
-              </Link>
+              //  setShowFarmersServices(true),
+              navigate("/farmers")
             )}
           />
 
