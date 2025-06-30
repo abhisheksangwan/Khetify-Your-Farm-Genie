@@ -111,7 +111,7 @@ const HomeFooter = () => {
 
         {/* Footer Bottom */}
         <div className="mt-8 pt-4 border-t border-green-700 text-center text-sm">
-          <p>&copy; 2025 AgriLink. All rights reserved.</p>
+          <p>&copy; 2025 Khetify. All rights reserved.</p>
           <Link to="/privacy-policy" className="hover:underline">
             Privacy Policy
           </Link>

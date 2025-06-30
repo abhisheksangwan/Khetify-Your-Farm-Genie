@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Bot, Send, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,16 +7,23 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const HomeChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { text: "Hello! I'm your AgriLink AI Advisor. How can I help you today?", isBot: true }
+    {
+      text: "Hello! I'm your Khetify AI Advisor. How can I help you today?",
+      isBot: true,
+    },
   ]);
   const [input, setInput] = useState("");
 
   const predefinedResponses = {
-    "weather": "For weather updates, I recommend checking local weather forecasts. In general, ensure your crops are protected during extreme weather conditions.",
-    "crops": "Popular crops vary by region. For North India, wheat, rice, and sugarcane are common. What's your location?",
-    "seeds": "We partner with Verma Seeds for quality seed supply. Contact us at 9286158428 for seed purchases.",
-    "help": "I can assist with farming advice, crop recommendations, weather guidance, and connecting you with our services.",
-    "contact": "You can reach us at agrilinkofficial04@gmail.com or call 9286158428 for immediate assistance."
+    weather:
+      "For weather updates, I recommend checking local weather forecasts. In general, ensure your crops are protected during extreme weather conditions.",
+    crops:
+      "Popular crops vary by region. For North India, wheat, rice, and sugarcane are common. What's your location?",
+    seeds:
+      "We partner with Verma Seeds for quality seed supply. Contact us at 9286158428 for seed purchases.",
+    help: "I can assist with farming advice, crop recommendations, weather guidance, and connecting you with our services.",
+    contact:
+      "You can reach us at agrilinkofficial04@gmail.com or call 9286158428 for immediate assistance.",
   };
 
   const handleSend = () => {
@@ -25,9 +31,10 @@ const HomeChatBot = () => {
 
     const userMessage = { text: input, isBot: false };
     const lowercaseInput = input.toLowerCase();
-    
-    let botResponse = "I understand you're asking about farming. For specific advice, please contact our experts at agrilinkofficial04@gmail.com or call 9286158428.";
-    
+
+    let botResponse =
+      "I understand you're asking about farming. For specific advice, please contact our experts at agrilinkofficial04@gmail.com or call 9286158428.";
+
     for (const [key, response] of Object.entries(predefinedResponses)) {
       if (lowercaseInput.includes(key)) {
         botResponse = response;
@@ -54,7 +61,7 @@ const HomeChatBot = () => {
             <div className="flex justify-between items-center">
               <CardTitle className="text-lg flex items-center">
                 <Bot className="h-5 w-5 mr-2" />
-                AgriLink AI Advisor
+                Khetify AI Advisor
               </CardTitle>
               <Button
                 variant="ghost"
@@ -71,13 +78,15 @@ const HomeChatBot = () => {
               {messages.map((message, index) => (
                 <div
                   key={index}
-                  className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}
+                  className={`flex ${
+                    message.isBot ? "justify-start" : "justify-end"
+                  }`}
                 >
                   <div
                     className={`max-w-xs p-3 rounded-lg text-sm ${
                       message.isBot
-                        ? 'bg-green-100 text-green-800'
-                        : 'bg-blue-500 text-white'
+                        ? "bg-green-100 text-green-800"
+                        : "bg-blue-500 text-white"
                     }`}
                   >
                     {message.text}
@@ -91,9 +100,13 @@ const HomeChatBot = () => {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Ask about farming..."
-                  onKeyPress={(e) => e.key === 'Enter' && handleSend()}
+                  onKeyPress={(e) => e.key === "Enter" && handleSend()}
                 />
-                <Button onClick={handleSend} size="sm" className="bg-green-600 hover:bg-green-700">
+                <Button
+                  onClick={handleSend}
+                  size="sm"
+                  className="bg-green-600 hover:bg-green-700"
+                >
                   <Send className="h-4 w-4" />
                 </Button>
               </div>

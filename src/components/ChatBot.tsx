@@ -17,7 +17,7 @@ const ChatBot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hello! I'm your AgriLink Farm Advisory assistant. How can I help you today?",
+      text: "Hello! I'm your Khetify Farm Advisory assistant. How can I help you today?",
       isBot: true,
       timestamp: new Date(),
     },

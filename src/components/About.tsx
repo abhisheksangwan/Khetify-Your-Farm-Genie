@@ -10,7 +10,7 @@ const About = () => {
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-700 mb-8">
-              AgriLink is India's first offline-to-online ecosystem built to
+              Khetify is India's first offline-to-online ecosystem built to
               support the backbone of our nation – farmers. We connect farmers
               with verified agri-students/Youth and field associates for
               need-based agricultural tasks, from sowing to harvesting. Think of

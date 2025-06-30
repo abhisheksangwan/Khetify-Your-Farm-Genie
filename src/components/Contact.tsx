@@ -7,9 +7,12 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-green-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-6">Contact Us</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-6">
+            Contact Us
+          </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Ready to join the AgriLink community? Get in touch with us for enquiries and partnerships.
+            Ready to join the Khetify community? Get in touch with us for
+            enquiries and partnerships.
           </p>
         </div>
 
@@ -21,7 +24,9 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700">Call us for immediate assistance</p>
-              <p className="text-green-600 font-semibold mt-2">Available Soon</p>
+              <p className="text-green-600 font-semibold mt-2">
+                Available Soon
+              </p>
             </CardContent>
           </Card>
 
@@ -32,7 +37,9 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700">Send us your queries</p>
-              <p className="text-green-600 font-semibold mt-2">agrilink04@gmail.com</p>
+              <p className="text-green-600 font-semibold mt-2">
+                agrilink04@gmail.com
+              </p>
             </CardContent>
           </Card>
 
@@ -43,7 +50,9 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700">Our headquarters</p>
-              <p className="text-green-600 font-semibold mt-2">Uttar Pradesh, India</p>
+              <p className="text-green-600 font-semibold mt-2">
+                Uttar Pradesh, India
+              </p>
             </CardContent>
           </Card>
 
@@ -54,7 +63,9 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700">Quick support via WhatsApp</p>
-              <p className="text-green-600 font-semibold mt-2">Available Soon</p>
+              <p className="text-green-600 font-semibold mt-2">
+                Available Soon
+              </p>
             </CardContent>
           </Card>
 
@@ -64,13 +75,22 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <div className="flex justify-center space-x-6">
-                <a href="#" className="text-green-600 hover:text-green-800 transition-colors">
+                <a
+                  href="#"
+                  className="text-green-600 hover:text-green-800 transition-colors"
+                >
                   <Linkedin className="h-8 w-8" />
                 </a>
-                <a href="#" className="text-green-600 hover:text-green-800 transition-colors">
+                <a
+                  href="#"
+                  className="text-green-600 hover:text-green-800 transition-colors"
+                >
                   <Instagram className="h-8 w-8" />
                 </a>
-                <a href="#" className="text-green-600 hover:text-green-800 transition-colors">
+                <a
+                  href="#"
+                  className="text-green-600 hover:text-green-800 transition-colors"
+                >
                   <Facebook className="h-8 w-8" />
                 </a>
               </div>

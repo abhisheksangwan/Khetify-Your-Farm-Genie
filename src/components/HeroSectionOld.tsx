@@ -29,7 +29,7 @@ const HeroSection = () => {
             {displayedText}
             <span className="animate-pulse">|</span>
           </h1>
-          
+
           {/* Tagline */}
           <div className="mb-6 animate-slide-up">
             <p className="text-2xl md:text-3xl font-semibold text-green-700 mb-2">
@@ -39,16 +39,18 @@ const HeroSection = () => {
               The farmer's need, Khetify's duty.
             </p>
           </div>
-          
+
           <p className="text-lg md:text-xl text-gray-700 mb-12 max-w-5xl mx-auto leading-relaxed animate-fade-in">
-            Khetify connects farmers with trained workforce associates for timely, task-based farm support — from Sowing to Harvesting.
-            It also creates income and learning opportunities for rural youth, fostering skill development and local jobs.
+            Khetify connects farmers with trained workforce associates for
+            timely, task-based farm support — from Sowing to Harvesting. It also
+            creates income and learning opportunities for rural youth, fostering
+            skill development and local jobs.
           </p>
-          
+
           <div className="mb-16 animate-scale-in">
             <img
               src="/lovable-uploads/104325f3-15c0-4e4b-a8fe-a650467c2f97.png"
-              alt="AgriLink Platform - Farmers connecting through technology"
+              alt="Khetify Platform - Farmers connecting through technology"
               className="mx-auto max-w-2xl w-full h-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105"
             />
           </div>

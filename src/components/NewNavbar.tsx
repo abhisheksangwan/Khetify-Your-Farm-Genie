@@ -17,8 +17,8 @@ const Logo = () => (
       className="h-12 w-12 mr-4"
     />
     <div>
-      <span className="font-bold text-3xl text-green-800">Khetify</span>
-      <p className="text-base text-green-600 font-medium">Your Farm Genie</p>
+      <span className="font-bold text-3xl text-green-1000">Khetify</span>
+      <p className="text-base text-green-500 font-medium">Your Farm Genie</p>
     </div>
   </Link>
 );
@@ -32,7 +32,7 @@ const Dropdown = ({
   links: { label: string; to?: string; onClick?: () => void }[];
 }) => (
   <div className="relative group">
-    <button className="text-green-700 hover:text-green-900 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 flex items-center hover:scale-105">
+    <button className="text-green-500 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 flex items-center hover:scale-105">
       {title}
       <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
     </button>
@@ -68,14 +68,14 @@ const DesktopNavigation = ({
       {/* About Us */}
       <Link
         to="/about"
-        className="text-green-700 hover:text-green-900 hover:scale-105 transition-transform duration-300"
+        className="text-green-500 hover:text-green-600 hover:scale-105 transition-transform duration-300"
       >
         About Us
       </Link>
       {/* About Us */}
       <Link
         to="/careers"
-        className="text-green-700 hover:text-green-900 hover:scale-105 transition-transform duration-300"
+        className="text-green-500 hover:text-green-600 hover:scale-105 transition-transform duration-300"
       >
         Careers
       </Link>
@@ -89,7 +89,7 @@ const DesktopNavigation = ({
       {/* About Us */}
       <Link
         to="/contactUs"
-        className="text-green-700 hover:text-green-900 hover:scale-105 transition-transform duration-300"
+        className="text-green-500 hover:text-green-600 hover:scale-105 transition-transform duration-300"
       >
         Contact Us
       </Link>
@@ -170,7 +170,7 @@ const NewNavbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-green-100 z-50">
+    <nav className="fixed top-0 w-full bg-transparent backdrop-blur-sm border-b border-green-100 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Logo />
