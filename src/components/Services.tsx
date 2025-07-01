@@ -3,6 +3,7 @@ import { Users, MessageSquare } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import ServicesSection from "./ServicesSection";
 import { Link, useNavigate } from "react-router-dom";
+import ConsultancyServices from "./ConsultancyServices";
 
 // Farmers Section Component
 const FarmersSection = ({ onClick }: { onClick: () => void }) => (
@@ -28,8 +29,9 @@ const FarmersSection = ({ onClick }: { onClick: () => void }) => (
 );
 
 // Consultancy Section Component
-const ConsultancySection = () => (
-  <Card className="bg-white border-green-200 hover:shadow-lg transition-shadow flex-1">
+const ConsultancySection = ({onClick}: {onClick: ()=> void }) => (
+  <Card className="bg-white border-green-200 hover:shadow-lg transition-shadow cursor-pointer flex-1"
+    onClick={onClick}>
     <CardHeader>
       <CardTitle className="flex items-center text-green-800">
         <MessageSquare className="h-6 w-6 mr-2" />
@@ -70,7 +72,9 @@ const Services = () => {
           />
 
           {/* Render Consultancy Section */}
-          <ConsultancySection />
+          <ConsultancySection
+            onClick={() => navigate("/consultancy")}
+          />
         </div>
 
         {/* Conditionally Render Farmers Services Section */}

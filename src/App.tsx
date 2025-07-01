@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ContactUs from "./pages/ContactUs";
 import Farmers from "./components/farmers";
+import ConsultancyServices from "./components/ConsultancyServices";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/farmers" element={<Farmers />} />
+          <Route path="/consultancy" element={<ConsultancyServices/>} />
           
         </Routes>
       </BrowserRouter>
