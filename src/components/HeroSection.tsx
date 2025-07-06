@@ -35,7 +35,7 @@ const HeroSection = () => {
       className="relative bg-white"
       style={{
         height: "100vh", // Ensure the section takes up the full viewport height
-        backgroundImage: `url('public/lovable-uploads/CoverPicWomen.png')`,
+        backgroundImage: `url('lovable-uploads/CoverPicWomen.png')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

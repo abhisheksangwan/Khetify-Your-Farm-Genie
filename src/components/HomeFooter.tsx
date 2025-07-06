@@ -27,7 +27,7 @@ const MoreLinks = () => {
 const Navigation = () => {
   const navLinks = [
     { name: "Home", href: "/home" },
-    { name: "About Us", href: "/about" },
+    { name: "About Us", href: "/aboutus" },
     { name: "Products", href: "/Products" },
     { name: "Careers", href: "/Careers" },
     { name: "Contact Us", href: "/ContactUs" },
@@ -186,7 +186,7 @@ const Footer = () => {
             {/* Logo */}
             <div>
               <img
-                src="public/lovable-uploads/logo-khetify_bg_removed.png"
+                src="/lovable-uploads/logo-khetify_bg_removed.png"
                 alt="Khetify Logo"
                 loading="lazy"
                 className="h-10 w-10 object-cover ml-px-1"

@@ -10,7 +10,7 @@ const Logo = () => (
     className="flex items-center hover:scale-105 transition-transform duration-300"
   >
     <img
-      src="public/lovable-uploads/logo-khetify_bg_removed.png"
+      src="lovable-uploads/logo-khetify_bg_removed.png"
       alt="Khetify Logo"
       loading="lazy"
       className="h-12 w-12 mr-4"
@@ -92,7 +92,7 @@ const DesktopNavigation = ({
       </Link>
       {/* About Us */}
       <Link
-        to="/about"
+        to="/aboutus"
         className="text-green-500 hover:text-green-600 hover:scale-105 transition-transform duration-300"
       >
         About Us
@@ -165,7 +165,7 @@ const MobileNavigation = ({
             Products
           </Link>
           <Link
-            to="/about"
+            to="/aboutus"
             className="text-green-700 hover:text-green-900 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
             onClick={() => setIsOpen(false)}
           >
