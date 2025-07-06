@@ -9,7 +9,6 @@ const Logo = () => (
     to="/home#"
     className="flex items-center hover:scale-105 transition-transform duration-300"
   >
-    
     <img
       src="public/lovable-uploads/logo-khetify_bg_removed.png"
       alt="Khetify Logo"
@@ -30,32 +29,51 @@ const Dropdown = ({
 }: {
   title: string;
   links: { label: string; to?: string; onClick?: () => void }[];
-}) => (
-  <div className="relative group">
-    <button className="text-green-500 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 flex items-center hover:scale-105">
-      {title}
-      <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
-    </button>
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  let timeout: NodeJS.Timeout;
+
+  const handleMouseEnter = () => {
+    clearTimeout(timeout); // Clear any existing timeout
+    setIsOpen(true); // Open the dropdown
+  };
+
+  const handleMouseLeave = () => {
+    timeout = setTimeout(() => {
+      setIsOpen(false); // Close the dropdown after 2 seconds
+    }, 400);
+  };
+
+  return (
     <div
-      className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border z-50 
-      opacity-0 group-hover:opacity-100 
-      scale-95 group-hover:scale-100 
-      pointer-events-none group-hover:pointer-events-auto 
-      transition-all duration-300 ease-out"
+      className="relative group"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      {links.map((link, index) => (
-        <Link
-          key={index}
-          to={link.to || "#"}
-          className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 transition-colors duration-200"
-          onClick={link.onClick}
+      <button className="text-green-500 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-all duration-600 flex items-center hover:scale-105">
+        {title}
+        <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-600 group-hover:rotate-180" />
+      </button>
+      {isOpen && (
+        <div
+          className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border z-50 
+          opacity-100 scale-100 pointer-events-auto transition-all duration-600 ease-out"
         >
-          {link.label}
-        </Link>
-      ))}
+          {links.map((link, index) => (
+            <Link
+              key={index}
+              to={link.to || "#"}
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 transition-colors duration-600"
+              onClick={link.onClick}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
-  </div>
-);
+  );
+};
 
 // Desktop Navigation Component
 const DesktopNavigation = ({
@@ -103,7 +121,7 @@ const DesktopNavigation = ({
       <span className=" flex gap-1 ">
         <button
           type="button"
-          className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+          className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-green-400 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
         >
           Signup
         </button>

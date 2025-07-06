@@ -19,7 +19,7 @@ const testimonialsData: Testimonial[] = [
   },
   {
     id: 2,
-    name: "Zuber aksar",
+    name: "Rati Shankar",
     image:
       "/public/lovable-uploads/MaleFarmer.png",
     rating: 5,
