@@ -2,6 +2,7 @@ import NewNavbar from "@/components/NewNavbar";
 import { Target, Eye } from "lucide-react";
 import React, { useState } from "react";
 import HomeFooter from "@/components/HomeFooter";
+import FoundingTeam from "@/components/FoundingTeam";
 
 const SectionHeader = ({ title }) => (
   <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-8 animate-fade-in">
@@ -245,6 +246,7 @@ opportunities to earn income. "
       <section className="py-20 bg-white">
         <MissionVisionValues />
       </section>
+      <FoundingTeam />
       <HomeFooter />
     </div>
   );
