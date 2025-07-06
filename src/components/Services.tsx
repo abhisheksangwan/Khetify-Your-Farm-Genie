@@ -14,28 +14,30 @@ const FarmersSection = ({ onClick }: { onClick: () => void }) => (
     <CardHeader>
       <CardTitle className="flex items-center text-green-800">
         <Users className="h-6 w-6 mr-2" />
-        For Farmers
+        Organic Produce
       </CardTitle>
     </CardHeader>
     <CardContent>
       <ul className="space-y-3 text-gray-700">
         <li>On-demand agri task assistance</li>
-        <li>Verified and trained manpower</li>
+        {/* <li>Verified and trained manpower</li>
         <li>Transparent pricing</li>
-        <li>WhatsApp support + hotline</li>
+        <li>WhatsApp support + hotline</li> */}
       </ul>
     </CardContent>
   </Card>
 );
 
 // Consultancy Section Component
-const ConsultancySection = ({onClick}: {onClick: ()=> void }) => (
-  <Card className="bg-white border-green-200 hover:shadow-lg transition-shadow cursor-pointer flex-1"
-    onClick={onClick}>
+const ConsultancySection = ({ onClick }: { onClick: () => void }) => (
+  <Card
+    className="bg-white border-green-200 hover:shadow-lg transition-shadow cursor-pointer flex-1"
+    onClick={onClick}
+  >
     <CardHeader>
       <CardTitle className="flex items-center text-green-800">
         <MessageSquare className="h-6 w-6 mr-2" />
-        Consultancy Services
+        Agri Consultancy
       </CardTitle>
     </CardHeader>
     <CardContent>
@@ -65,16 +67,14 @@ const Services = () => {
         <div className="flex justify-between gap-8">
           {/* Render Farmers Section */}
           <FarmersSection
-            onClick={() => (
+            onClick={() =>
               //  setShowFarmersServices(true),
               navigate("/farmers")
-            )}
+            }
           />
 
           {/* Render Consultancy Section */}
-          <ConsultancySection
-            onClick={() => navigate("/consultancy")}
-          />
+          <ConsultancySection onClick={() => navigate("/consultancy")} />
         </div>
 
         {/* Conditionally Render Farmers Services Section */}

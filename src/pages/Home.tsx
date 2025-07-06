@@ -9,6 +9,7 @@ import QueryForm from "@/components/QueryForm";
 import HomeChatBot from "@/components/HomeChatBot";
 import HomeFooter from "@/components/HomeFooter";
 import LanguageSelector from "@/components/LanguageSelector";
+import Testimonials from "@/components/Testimonials";
 
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
       
       <Services />
       <QueryForm />
+      <Testimonials />
       <HomeChatBot />
       <HomeFooter />
     </div>

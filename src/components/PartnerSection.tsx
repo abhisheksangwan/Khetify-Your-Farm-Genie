@@ -10,8 +10,9 @@ const PartnerSection = () => {
           <div className="flex justify-center items-center">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <img
-                src="/lovable-uploads/f15f6391-1b7e-4841-825c-977993b03fc6.png"
+                src="/lovable-uploads/verma-seeds-logo.png"
                 alt="Verma Seeds Logo"
+                loading="lazy"
                 className="mx-auto mb-4 h-16 w-auto"
               />
               <p className="text-lg font-semibold text-green-700">Verma Seeds</p>

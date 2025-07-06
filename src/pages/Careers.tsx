@@ -130,6 +130,7 @@ const Careers = () => {
                 <img
                   src="/lovable-uploads/ff4298ed-0c43-4f6b-ac83-a872b8574a30.png"
                   alt="Be Our Farm Genie"
+                  loading="lazy"
                   className="mx-auto max-w-sm h-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
                 />
                 <p className="text-xl font-semibold text-green-700 mt-4">

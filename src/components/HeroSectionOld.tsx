@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const HeroSection = () => {
   const [displayedText, setDisplayedText] = useState("");
-  const fullText = "A Smart Ops Platform for the Future of Farming";
+  const fullText = "";
     useEffect(() => {
       let index = 0;
       const timer = setTimeout(() => {
@@ -49,7 +49,7 @@ const HeroSection = () => {
 
           <div className="mb-16 animate-scale-in">
             <img
-              src="/lovable-uploads/104325f3-15c0-4e4b-a8fe-a650467c2f97.png"
+              src="public/lovable-uploads/Stock-farmer-labour.png"
               alt="Khetify Platform - Farmers connecting through technology"
               className="mx-auto max-w-2xl w-full h-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105"
             />

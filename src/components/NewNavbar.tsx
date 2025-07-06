@@ -3,22 +3,22 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-
-
 // Logo Component
 const Logo = () => (
   <Link
-    to="/"
+    to="/home#"
     className="flex items-center hover:scale-105 transition-transform duration-300"
   >
+    
     <img
-      src="public/lovable-uploads/WhatsApp Image 2025-06-26 at 00.46.51.jpeg"
+      src="public/lovable-uploads/logo-khetify_bg_removed.png"
       alt="Khetify Logo"
+      loading="lazy"
       className="h-12 w-12 mr-4"
     />
     <div>
       <span className="font-bold text-3xl text-green-1000">Khetify</span>
-      <p className="text-base text-green-500 font-medium">Your Farm Genie</p>
+      <p className="text-base text-green-500 font-medium ">Your Farm Genie</p>
     </div>
   </Link>
 );
@@ -64,7 +64,14 @@ const DesktopNavigation = ({
   scrollToContact: () => void;
 }) => (
   <div className="hidden md:block">
-    <div className="ml-10 flex items-baseline space-x-4">
+    <div className="ml-10 flex items-baseline space-x-9">
+      {/* Home */}
+      <Link
+        to="/home#"
+        className="text-green-500 hover:text-green-600 hover:scale-105 transition-transform duration-300"
+      >
+        Home
+      </Link>
       {/* About Us */}
       <Link
         to="/about"
@@ -72,7 +79,7 @@ const DesktopNavigation = ({
       >
         About Us
       </Link>
-      {/* About Us */}
+      {/* Careers */}
       <Link
         to="/careers"
         className="text-green-500 hover:text-green-600 hover:scale-105 transition-transform duration-300"
@@ -93,6 +100,20 @@ const DesktopNavigation = ({
       >
         Contact Us
       </Link>
+      <span className=" flex gap-1 ">
+        <button
+          type="button"
+          className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+        >
+          Signup
+        </button>
+        <button
+          type="button"
+          className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+        >
+          Login
+        </button>
+      </span>
     </div>
   </div>
 );

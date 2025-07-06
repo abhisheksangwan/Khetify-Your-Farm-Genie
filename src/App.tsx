@@ -3,7 +3,16 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
+import React, { Suspense } from "react";
+
+const NewNavbar = React.lazy(() => import("./components/NewNavbar"));
+const PartnerSection = React.lazy(() => import("./components/PartnerSection"));
+const HeroSection = React.lazy(() => import("./components/HeroSection"));
+const Testimonials = React.lazy(() => import("./components/Testimonials"));
+const Services = React.lazy(() => import("./components/Services"));
+
+
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Careers from "./pages/Careers";
@@ -23,7 +32,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/products" element={<Products />} />

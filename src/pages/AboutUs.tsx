@@ -18,6 +18,7 @@ const AboutUs = () => {
               <img
                 src="/lovable-uploads/104325f3-15c0-4e4b-a8fe-a650467c2f97.png"
                 alt="Khetify connecting farmers with technology"
+                loading="lazy"
                 className="mx-auto max-w-md w-full h-auto rounded-xl shadow-lg"
               />
             </div>

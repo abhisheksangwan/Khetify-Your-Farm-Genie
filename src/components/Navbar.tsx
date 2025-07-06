@@ -21,8 +21,9 @@ const Navbarr = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <img
-              src="public/lovable-uploads/WhatsApp Image 2025-06-26 at 00.46.51.jpeg"
+              src="public/lovable-uploads/logo-khetify.png"
               alt="Khetify Logo"
+              loading="lazy"
               className="h-10 w-10 mr-3"
             />
             <span className="font-bold text-xl text-green-800">Khetify</span>
