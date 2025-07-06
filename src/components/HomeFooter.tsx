@@ -1,9 +1,13 @@
+import { Target } from "lucide-react";
 import React from "react";
 
 const MoreLinks = () => {
+
+    const whatsappNumber = "919286158428";
+    const whatsappUrl = `https://wa.me/${whatsappNumber}`;
   const links = [
     { name: "FAQs", href: "/faqs" },
-    { name: "Whatsapp Connect", href: "/whatsapp-connect" },
+    { name: "Whatsapp Connect", href: whatsappUrl , target : "_blank" },
     { name: "Blog", href: "/blog" },
   ];
 
@@ -13,7 +17,12 @@ const MoreLinks = () => {
       <ul className="space-y-2">
         {links.map((link) => (
           <li key={link.name}>
-            <a href={link.href} className="text-gray-700 hover:text-gray-900">
+            <a
+              href={link.href}
+              className="text-gray-700 hover:text-gray-900"
+              target="_blank" // Opens link in a new tab
+              rel="noopener noreferrer"
+            >
               {link.name}
             </a>
           </li>
@@ -39,7 +48,12 @@ const Navigation = () => {
       <ul className="space-y-2">
         {navLinks.map((link) => (
           <li key={link.name}>
-            <a href={link.href} className="text-gray-700 hover:text-gray-900">
+            <a
+              href={link.href}
+              className="text-gray-700 hover:text-gray-900"
+              target="_blank" // Opens link in a new tab
+              rel="noopener noreferrer"
+            >
               {link.name}
             </a>
           </li>
@@ -82,6 +96,8 @@ const SocialIcons = () => {
           href="#"
           aria-label="Twitter"
           className="bg-gray-200 hover:bg-gray-300 rounded-full p-2 text-blue-500"
+          target="_blank" // Opens link in a new tab
+          rel="noopener noreferrer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -96,6 +112,8 @@ const SocialIcons = () => {
           href="#"
           aria-label="Facebook"
           className="bg-blue-700 hover:bg-blue-800 rounded-full p-2 text-white"
+          target="_blank" // Opens link in a new tab
+          rel="noopener noreferrer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -110,6 +128,8 @@ const SocialIcons = () => {
           href="#"
           aria-label="Instagram"
           className="bg-white hover:bg-gray-100 rounded-full p-2 text-purple-600 border border-purple-600"
+          target="_blank" // Opens link in a new tab
+          rel="noopener noreferrer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -124,6 +144,8 @@ const SocialIcons = () => {
           href="#"
           aria-label="LinkedIn"
           className="bg-blue-100 hover:bg-blue-200 rounded-full p-2 text-blue-700"
+          target="_blank" // Opens link in a new tab
+          rel="noopener noreferrer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -138,6 +160,8 @@ const SocialIcons = () => {
           href="#"
           aria-label="YouTube"
           className="bg-red-600 hover:bg-red-700 rounded-full p-2 text-white"
+          target="_blank" // Opens link in a new tab
+          rel="noopener noreferrer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -163,6 +187,8 @@ const SocialIcons = () => {
         <a
           href="mailto:agrilinkofficial04@gmail.com"
           className="hover:text-gray-900"
+          target="_blank" // Opens link in a new tab
+          rel="noopener noreferrer"
         >
           agrilinkofficial04@gmail.com
         </a>
@@ -246,7 +272,12 @@ const Footer = () => {
                   aria-hidden="true"
                 ></span>
               )}
-              <a href={link.href} className="hover:underline">
+              <a
+                href={link.href}
+                className="hover:underline"
+                target="_blank" // Opens link in a new tab
+                rel="noopener noreferrer"
+              >
                 {link.name}
               </a>
             </React.Fragment>
