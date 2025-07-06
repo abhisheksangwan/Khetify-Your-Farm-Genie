@@ -140,7 +140,7 @@ const MissionVisionValues: React.FC = () => {
               className="w-full h-auto object-cover "
               onError={(e) => {
                 (e.target as HTMLImageElement).src =
-                  "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c9df0d1f-3354-4393-92e7-30482ba0b71e.png";
+                  "lovable-uploads/error-img-buyer-farmer.png";
               }}
               loading="lazy"
               decoding="async"
