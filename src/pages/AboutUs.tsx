@@ -222,7 +222,7 @@ opportunities to earn income. "
           </div>
           <div>
             <ImageSection
-              src="public/lovable-uploads/Khetifyy-aboutus.png"
+              src="lovable-uploads/Khetifyy-aboutus.png"
               alt="Khetify connecting farmers with technology"
             />
           </div>
