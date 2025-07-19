@@ -8,25 +8,32 @@ interface Testimonial {
   text: string;
 }
 
+const imgUrl = () => {
+  const baseUrl = "/lovable-uploads/";
+  return baseUrl;
+}
+
+
+
 const testimonialsData: Testimonial[] = [
   {
     id: 1,
     name: "Lisa Arora",
-    image: "lovable-uploads/BaddieFemaleFarmer.png",
+    image: imgUrl() + "BaddieFemaleFarmer.png",
     rating: 5,
     text: "Khetify has transformed my farming experience. The platform connects me with skilled professionals who provide valuable insights and support. I can now focus on what I love most - farming!",
   },
   {
     id: 2,
     name: "Rati Shankar",
-    image: "/lovable-uploads/MaleFarmer.png",
+    image: imgUrl() + "MaleFarmer.png",
     rating: 5,
     text: "Khetify has been a game-changer for my farm.",
   },
   {
     id: 3,
     name: "Samantha Sahu",
-    image: "lovable-uploads/FemaleFarmer.png",
+    image: imgUrl() + "FemaleFarmer.png",
     rating: 4,
     text: "Khetify has made it easy for me to find reliable help for my farm. The professionals I connected with were knowledgeable and helped me improve my yields significantly.",
   },
